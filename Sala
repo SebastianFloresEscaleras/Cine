@@ -1,0 +1,55 @@
+package fis.poo;
+import java.util.ArrayList;
+
+public class SalaExtra {
+    private int numeroSala;
+    private boolean estaDisponible;
+    
+    private ArrayList<Asiento> listaAsientos;
+
+
+    public SalaExtra(int numeroSala) {
+        this.numeroSala = numeroSala;
+        this.estaDisponible = true;
+        this.listaAsientos = new ArrayList<>();
+
+    }
+
+    public void asignarSalaLibre() {
+        if (this.estaDisponible) {
+            this.estaDisponible = false;
+            System.out.println("La sala número " + numeroSala + " ha sido asignada correctamente.");
+        } else {
+            System.out.println("La sala número " + numeroSala + " no está disponible.");
+        }
+    }
+
+    public void agregarAsiento(Asiento asiento) {
+        this.listaAsientos.add(asiento);
+    }
+
+
+    public int getNumeroSala() {
+        return numeroSala;
+    }
+
+    public void setNumeroSala(int numeroSala) {
+        this.numeroSala = numeroSala;
+    }
+
+    public boolean estaEstaDisponible() {
+        return estaDisponible;
+    }
+
+    public void setEstaDisponible(boolean estaDisponible) {
+        this.estaDisponible = estaDisponible;
+    }
+
+    public ArrayList<Asiento> getListaAsientos() {
+        return listaAsientos;
+    
+    }
+
+
+
+}
